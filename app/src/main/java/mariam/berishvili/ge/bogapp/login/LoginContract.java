@@ -12,7 +12,7 @@ public interface LoginContract {
     interface LoginView {
         void onLoginSuccess(ClientLoginInfo loginInfo);
         void onLoginFailure(Throwable throwable);
-        void onInvalidUsernamePassword();
+        void onInvalidUsernamePassword(int status);
     }
 
     interface UserInfoIntractor {

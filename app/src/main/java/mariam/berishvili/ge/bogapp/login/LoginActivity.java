@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import java.util.Calendar;
 
 import mariam.berishvili.ge.bogapp.R;
 import mariam.berishvili.ge.bogapp.main.MainActivity;
+import mariam.berishvili.ge.bogapp.model.Constants;
 import mariam.berishvili.ge.bogapp.model.login.ClientLoginInfo;
 
 
@@ -51,12 +53,37 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
 
     @Override
     public void onLoginFailure(Throwable throwable) {
-        showToast(R.string.login_activity_unable_login_toast_text);
+        showToast(R.string.login_activity_unable_login);
     }
 
     @Override
-    public void onInvalidUsernamePassword() {
-        showToast(R.string.login_activity_invalid_username_password_toast_text);
+    public void onInvalidUsernamePassword(int status) {
+        switch (status){
+            case Constants.USERNAME_PASSWORD_EMPTY:
+                showToast(R.string.login_activity_activity_login_username_password_empty);
+                return;
+            case Constants.USERNAME_PASSWORD_SHORT:
+                showToast(R.string.login_activity_activity_login_username_password_short);
+                return;
+            case Constants.USERNAME_EMPTY_PASSWORD_SHORT:
+                showToast(R.string.login_activity_activity_login_username_empty_password_short);
+                return;
+            case Constants.USERNAME_SHORT_PASSWORD_EMPTY:
+                showToast(R.string.login_activity_activity_login_username_short_password_empty);
+                return;
+            case Constants.USERNAME_SHORT:
+                showToast(R.string.login_activity_activity_login_username_short);
+                return;
+            case Constants.PASSWORD_SHORT:
+                showToast(R.string.login_activity_activity_login_password_short);
+                return;
+            case Constants.USERNAME_EMPTY:
+                showToast(R.string.login_activity_activity_login_username_empty);
+                return;
+            case Constants.PASSWORD_EMPTY:
+                showToast(R.string.login_activity_activity_login_password_empty);
+                return;
+        }
     }
 
 

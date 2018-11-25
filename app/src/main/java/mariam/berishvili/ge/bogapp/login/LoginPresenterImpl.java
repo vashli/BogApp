@@ -1,13 +1,14 @@
 package mariam.berishvili.ge.bogapp.login;
 
 
+import mariam.berishvili.ge.bogapp.model.Constants;
 import mariam.berishvili.ge.bogapp.model.login.ClientLoginInfo;
 import mariam.berishvili.ge.bogapp.network.RetrofitProvider;
 
 public class LoginPresenterImpl implements LoginContract.Presenter {
 
-    private static final int USERNAME_MIN_LENGTH = 4;
-    private static final int PASSWORD_MIN_LENGTH = 4;
+    private static final int USERNAME_MIN_LENGTH = 3;
+    private static final int PASSWORD_MIN_LENGTH = 3;
     private LoginContract.LoginView loginView;
     private LoginContract.UserInfoIntractor loginIntractor;
 
@@ -18,8 +19,9 @@ public class LoginPresenterImpl implements LoginContract.Presenter {
 
     @Override
     public void fetchLoginDataFromServer(String username, String password) {
-        if (!validUsernamePassword(username, password)) {
-            loginView.onInvalidUsernamePassword();
+        int status = checkUserNamePassword(username, password);
+        if (status != Constants.USERNAME_PASSWORD_OK) {
+            loginView.onInvalidUsernamePassword(status);
         } else{
             loginIntractor.getLoginInfo(new LoginContract.UserInfoIntractor.OnFinishedListener() {
 
@@ -42,7 +44,16 @@ public class LoginPresenterImpl implements LoginContract.Presenter {
         loginView = null;
     }
 
-    private boolean validUsernamePassword(String username, String password){
-        return (username.length() >= USERNAME_MIN_LENGTH && password.length() >= PASSWORD_MIN_LENGTH );
+    private int checkUserNamePassword(String username, String password){
+        if(username.isEmpty() && password.isEmpty()) return Constants.USERNAME_PASSWORD_EMPTY;
+        if(username.isEmpty() && password.length() < PASSWORD_MIN_LENGTH) return Constants.USERNAME_EMPTY_PASSWORD_SHORT;
+        if(username.length() < USERNAME_MIN_LENGTH && password.isEmpty()) return Constants.USERNAME_SHORT_PASSWORD_EMPTY;
+        if(username.length() < USERNAME_MIN_LENGTH && password.length() < PASSWORD_MIN_LENGTH ) return Constants.USERNAME_PASSWORD_SHORT;
+        if(username.isEmpty()) return Constants.USERNAME_EMPTY;
+        if(password.isEmpty()) return Constants.PASSWORD_EMPTY;
+        if(password.length() < PASSWORD_MIN_LENGTH) return Constants.PASSWORD_SHORT;
+        if(username.length() < USERNAME_MIN_LENGTH) return Constants.USERNAME_SHORT;
+
+        return Constants.USERNAME_PASSWORD_OK;
     }
 }

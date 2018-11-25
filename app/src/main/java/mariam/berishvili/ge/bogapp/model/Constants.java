@@ -24,4 +24,17 @@ public class Constants {
     public static final String CARD_TYPE_GREEN = "AMEXGCG";
 
 
+    public static final int USERNAME_PASSWORD_OK = 0;
+    public static final int USERNAME_PASSWORD_EMPTY = 1;
+    public static final int USERNAME_PASSWORD_SHORT = 2;
+    public static final int USERNAME_EMPTY_PASSWORD_SHORT = 3;
+    public static final int USERNAME_SHORT_PASSWORD_EMPTY = 4;
+    public static final int USERNAME_SHORT = 5;
+    public static final int PASSWORD_SHORT = 6;
+    public static final int PASSWORD_EMPTY = 7;
+    public static final int USERNAME_EMPTY = 8;
+    public static final int USERNAME_PASSWORD_NOT_FOUND = 9;
+
+
+
 }

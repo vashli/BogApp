@@ -3,8 +3,16 @@
     <string name="login_activity_username_hint">მომხმარებელი</string>
     <string name="login_activity_password_hint">პაროლი</string>
     <string name="login_activity_login_button_text">შესვლა</string>
-    <string name="login_activity_unable_login_toast_text">მომხმარებლის სახელი ან პაროლი ვერ მოიძებნა</string>
-    <string name="login_activity_invalid_username_password_toast_text">მომხმარებლის სახელის და პაროლის სიგრძე უნდა აღემატებოდეს 3 სიმბოლოს</string>
+    <string name="login_activity_unable_login">მომხმარებლის სახელი ან პაროლი ვერ მოიძებნა</string>
+    <string name="login_activity_activity_login_username_password_empty">მომხმარებლის სახელი და პაროლი არ უნდა იყოს ცარიელი</string>
+    <string name="login_activity_activity_login_username_empty">მომხმარებლის სახელი არ უნდა იყოს ცარიელი</string>
+    <string name="login_activity_activity_login_password_empty">პაროლი არ უნდა იყოს ცარიელი</string>
+    <string name="login_activity_activity_login_username_password_short">მომხმარებლის სახელი და პაროლი არ უნდა იყოს 3 სიმბოლოზე ნაკლები</string>
+    <string name="login_activity_activity_login_username_short">მომხმარებლის სახელი არ უნდა იყოს 3 სიმბოლოზე ნაკლები</string>
+    <string name="login_activity_activity_login_password_short">პაროლი არ უნდა იყოს 3 სიმბოლოზე ნაკლები</string>
+    <string name="login_activity_activity_login_username_empty_password_short">მომხმარებლის სახელი არ უნდა იყოს ცარიელი, ხოლო პაროლი 3 სიმბოლოზე ნაკლები</string>
+    <string name="login_activity_activity_login_username_short_password_empty">მომხმარებლის სახელი არ უნდა იყოს 3 სიმბოლოზე ნაკლები, ხოლო პაროლი ცარიელი</string>
+
     <string name="page_title_profile">პროფილი</string>
     <string name="page_title_actives">აქტივები</string>
     <string name="page_title_transactions">გადახდების ისტორია</string>
@@ -27,4 +35,5 @@
     <string name="fragment_card_cell_type_solo">solo</string>
     <string name="fragment_card_cell_type_green">green</string>
     <string name="fragment_card_cell_type_gold">gold</string>
+
 </resources>
