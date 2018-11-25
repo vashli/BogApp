@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/fragment_transaction_cell_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/circle"
+        android:padding="14dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lari"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_transaction_cell_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_transaction_cell_merchant_name"
+        app:layout_constraintStart_toEndOf="@+id/fragment_transaction_cell_icon"
+        app:layout_constraintTop_toTopOf="@+id/fragment_transaction_cell_icon"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/fragment_transaction_cell_merchant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_transaction_cell_entry_group_name"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transaction_cell_day"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transaction_cell_day" />
+
+    <TextView
+        android:id="@+id/fragment_transaction_cell_entry_ccy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/fragment_transaction_cell_entry_ccy"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragment_transaction_cell_merchant_name" />
+
+    <TextView
+        android:id="@+id/fragment_transaction_cell_entry_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_transaction_cell_icon"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transaction_cell_merchant_name"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transaction_cell_merchant_name" />
+
+    <TextView
+        android:id="@+id/fragment_transaction_cell_entry_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_transaction_cell_entry_ccy"
+        app:layout_constraintTop_toTopOf="@+id/fragment_transaction_cell_entry_ccy" />
+</android.support.constraint.ConstraintLayout>

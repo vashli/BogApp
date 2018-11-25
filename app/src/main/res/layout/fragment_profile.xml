@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/fragment_profile_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:id="@+id/fragment_profile_horizontal_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/bg_horizontal_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_profile_title_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_title_first_name"
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_title_last_name"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_profile_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/fragment_profile_title_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_title_last_name"
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_title_gender"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_title_first_name"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_title_first_name" />
+
+    <TextView
+        android:id="@+id/fragment_profile_title_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_title_gender"
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_title_birthday"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_title_last_name"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_title_last_name" />
+
+    <TextView
+        android:id="@+id/fragment_profile_title_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="end"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_title_birthday"
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_title_category"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_title_gender"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_title_gender" />
+
+    <TextView
+        android:id="@+id/fragment_profile_title_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_title_category"
+        android:textAlignment="textEnd"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_horizontal_line"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_title_birthday"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_title_birthday" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_guideline"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_title_first_name" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_first_name"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_title_last_name" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_last_name"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_title_gender" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_gender"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_title_birthday" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_birthday"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_title_category" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_value_address"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_category"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_horizontal_line"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_profile_value_mail"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_phone"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_value_phone" />
+
+    <TextView
+        android:id="@+id/fragment_profile_value_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:maxWidth="150dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragment_profile_value_address"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_value_address" />
+
+    <TextView
+        android:id="@+id/fragment_profile_text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_text_phone"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_title_category"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_value_phone" />
+
+    <TextView
+        android:id="@+id/fragment_profile_text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_text_address"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_text_phone"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_value_address" />
+
+    <TextView
+        android:id="@+id/fragment_profile_text_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:text="@string/fragment_profile_text_mail"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_profile_text_address"
+        app:layout_constraintTop_toTopOf="@+id/fragment_profile_value_mail" />
+
+</android.support.constraint.ConstraintLayout>

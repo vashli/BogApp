@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">BogApp</string>
+    <string name="login_activity_username_hint">მომხმარებელი</string>
+    <string name="login_activity_password_hint">პაროლი</string>
+    <string name="login_activity_login_button_text">შესვლა</string>
+    <string name="login_activity_unable_login_toast_text">მომხმარებლის სახელი ან პაროლი ვერ მოიძებნა</string>
+    <string name="login_activity_invalid_username_password_toast_text">მომხმარებლის სახელის და პაროლის სიგრძე უნდა აღემატებოდეს 3 სიმბოლოს</string>
+    <string name="page_title_profile">პროფილი</string>
+    <string name="page_title_actives">აქტივები</string>
+    <string name="page_title_transactions">გადახდების ისტორია</string>
+    <string name="page_title_cards">ბარათები</string>
+    <string name="fragment_profile_title_first_name">სახელი</string>
+    <string name="fragment_profile_title_last_name">გვარი</string>
+    <string name="fragment_profile_title_gender">სქესი</string>
+    <string name="fragment_profile_title_birthday">დაბადების თარიღი</string>
+    <string name="fragment_profile_title_category">კლიენტის კატეგორია</string>
+    <string name="fragment_profile_text_phone">ტელეფონი</string>
+    <string name="fragment_profile_text_address">მისამართი</string>
+    <string name="fragment_profile_text_mail">ელ-ფოსტა</string>
+    <string name="fragment_actives_cell_points_order_no_title">ნომერი:</string>
+    <string name="fragment_transactions_recycler_income_title">შემოსავალი</string>
+    <string name="fragment_transactions_recycler_outcome_title">გასავალი</string>
+    <string name="fragment_transaction_cell_entry_ccy">ლარი</string>
+    <string name="fragment_transaction_cell_entry_day_today">დღეს</string>
+    <string name="fragment_transaction_cell_entry_day_yesterday">გუშინ</string>
+    <string name="fragment_card_cell_valid_title">valid thru</string>
+    <string name="fragment_card_cell_type_solo">solo</string>
+    <string name="fragment_card_cell_type_green">green</string>
+    <string name="fragment_card_cell_type_gold">gold</string>
+</resources>

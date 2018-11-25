@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fa671a</color>
+    <color name="colorPrimaryDark">#d15617</color>
+    <color name="colorAccent">#fa671a</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTextCard">#ffffff</color>
+    <color name="colorOutcome">#ff0000</color>
+    <color name="colorIncome">#008407</color>
+    <color name="colorLari">#272424</color>
+
+
+</resources>
