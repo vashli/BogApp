@@ -45,7 +45,6 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
     @Override
     public void onLoginSuccess(ClientLoginInfo loginInfo) {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        intent.putExtra("id", loginInfo.getSessionId());
         startActivity(intent);
         finish();
     }

@@ -48,7 +48,6 @@ public class CardsFragment extends Fragment {
         api.getCards().enqueue(new retrofit2.Callback<List<Card>>() {
             @Override
             public void onResponse(Call<List<Card>> call, Response<List<Card>> response) {
-                Log.d("xxx", "succ" + response.body().size());
                 adapter.setData(response.body());
             }
 

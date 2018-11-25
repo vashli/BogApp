@@ -16,15 +16,15 @@ public interface Api {
     Call<ClientLoginInfo> getClientLoginInfo(@Path("username") String username,
                                              @Path("password") String password);
 
-    @GET("api/Clients/ClientInfo/{sessionId}")
+    @GET("api/Clients/ClientInfo")
     Call<ClientInfo> getClientInfo();
 
-    @GET("api/Products/AssetsAndLiabilities/{sessionId}")
+    @GET("api/Products/AssetsAndLiabilities")
     Call<AssetsAndLiabilities> getAssetsAndLiabilities();
 
-    @GET("api/Products/Transactions/{sessionId}")
+    @GET("api/Products/Transactions")
     Call<Transactions> getTransactions();
 
-    @GET("api/Products/Cards/{sessionId}")
+    @GET("api/Products/Cards")
     Call<List<Card>> getCards();
 }

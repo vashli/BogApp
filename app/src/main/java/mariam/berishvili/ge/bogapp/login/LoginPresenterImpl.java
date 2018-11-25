@@ -2,6 +2,7 @@ package mariam.berishvili.ge.bogapp.login;
 
 
 import mariam.berishvili.ge.bogapp.model.login.ClientLoginInfo;
+import mariam.berishvili.ge.bogapp.network.RetrofitProvider;
 
 public class LoginPresenterImpl implements LoginContract.Presenter {
 
@@ -25,6 +26,7 @@ public class LoginPresenterImpl implements LoginContract.Presenter {
                 @Override
                 public void onFinished(ClientLoginInfo loginInfo) {
                     loginView.onLoginSuccess(loginInfo);
+                    RetrofitProvider.session_id = loginInfo.getSessionId();
                 }
 
                 @Override
